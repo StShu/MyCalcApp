@@ -1,11 +1,12 @@
 package com.example.mycalcapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import org.mariuszgromada.math.mxparser.*;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,14 +20,6 @@ public class MainActivity extends AppCompatActivity {
         display.setShowSoftInputOnFocus(false);
 
         display.setOnClickListener(v -> display.setText(""));
-        /*display.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (getString(R.string.display).equals(display.getText().toString())){
-                    display.setText("");
-                }
-            }
-        });*/
     }
 
     private void updateText(String strToAdd){
@@ -81,7 +74,17 @@ public class MainActivity extends AppCompatActivity {
         updateText(".");
     }
     public void equalsBtn(View view){
+        String userExp = display.getText().toString();
 
+        userExp = userExp.replaceAll("÷","/");
+        userExp = userExp.replaceAll("×","*");
+
+        Expression exp = new Expression(userExp);
+
+        String result = String.valueOf(exp.calculate());
+
+        display.setText(result);
+        display.setSelection(result.length());
     }
     public void addBtn(View view){
         updateText("+");
