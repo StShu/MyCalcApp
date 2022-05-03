@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/input"
         app:layout_constraintVertical_bias="0.95"
         tools:layout_editor_absoluteX="1dp">
 
@@ -24,13 +24,14 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/clear"
-                android:background="@drawable/circle"
-                android:textColor="#ffffff"
                 android:layout_margin="5dp"
-                android:textSize="24sp"
-                android:backgroundTint="#dd2c00"/>
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="#dd2c00"
+                android:onClick="clearBtn"
+                android:text="@string/clear"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/parenthesesBtn"
@@ -38,6 +39,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="parenthesesBtn"
                 android:text="@string/parentheses"
                 android:textColor="#000000" />
 
@@ -47,6 +49,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="exponentBtn"
                 android:text="@string/exponent"
                 android:textColor="#000000" />
 
@@ -56,6 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="divideBtn"
                 android:text="@string/divide"
                 android:textColor="#000000" />
         </TableRow>
@@ -70,8 +74,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/seven"
+                android:onClick="sevenBtn"
 
+                android:text="@string/seven"
                 android:textColor="#000000" />
 
             <Button
@@ -80,6 +85,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="eightBtn"
                 android:text="@string/eight"
                 android:textColor="#000000" />
 
@@ -89,6 +95,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="nineBtn"
                 android:text="@string/nine"
                 android:textColor="#000000" />
 
@@ -98,6 +105,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="multiplyBtn"
                 android:text="@string/multiply"
                 android:textColor="#388E3C" />
         </TableRow>
@@ -112,6 +120,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="fourBtn"
                 android:text="@string/four"
                 android:textColor="#000000" />
 
@@ -121,6 +130,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="fiveBtn"
                 android:text="@string/five"
                 android:textColor="#000000" />
 
@@ -130,6 +140,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="sixBtn"
                 android:text="@string/six"
                 android:textColor="#000000" />
 
@@ -139,6 +150,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="subtractBtn"
                 android:text="@string/subtract"
                 android:textColor="#000000" />
         </TableRow>
@@ -153,6 +165,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="oneBtn"
                 android:text="@string/one"
                 android:textColor="#000000" />
 
@@ -162,6 +175,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="twoBtn"
                 android:text="@string/two"
                 android:textColor="#000000" />
 
@@ -171,6 +185,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="threeBtn"
                 android:text="@string/three"
                 android:textColor="#000000" />
 
@@ -180,6 +195,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="addBtn"
                 android:text="@string/add"
                 android:textColor="#000000" />
 
@@ -195,6 +211,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="plusMinusBtn"
                 android:text="@string/plusMinus"
                 android:textColor="#000000" />
 
@@ -204,6 +221,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="zeroBtn"
                 android:text="@string/zero"
                 android:textColor="#000000" />
 
@@ -213,6 +231,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="pointBtn"
                 android:text="@string/point"
                 android:textColor="#000000" />
 
@@ -223,16 +242,17 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/equals"
                 android:background="@drawable/circle"
                 android:backgroundTint="#43A047"
+                android:onClick="equalsBtn"
+                android:text="@string/equals"
                 android:textColor="#ffffff" />
         </TableRow>
     </TableLayout>
 
 
     <EditText
-        android:id="@+id/textView"
+        android:id="@+id/input"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
@@ -254,6 +274,7 @@
         android:layout_height="44dp"
         android:background="@drawable/circle"
         android:contentDescription="@string/backspace"
+        android:onClick="backspaceBtn"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
